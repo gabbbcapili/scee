@@ -1,0 +1,5 @@
+---
+deployment:
+ tasks:
+ - export DEPLOYPATH=/home/aquiware/public_html/scee
+ - /bin/cp -r * $DEPLOYPATH
