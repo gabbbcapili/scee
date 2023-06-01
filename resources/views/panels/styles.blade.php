@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="{{ asset(mix('vendors/css/vendors.min.css')) }}" />
 @endif
 
+<link rel="stylesheet" href="{{ asset('vendors/css/extensions/sweetalert2.min.css') }}">
 @yield('vendor-style')
 <!-- END: Vendor CSS-->
 

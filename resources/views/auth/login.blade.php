@@ -31,7 +31,7 @@
               <label for="login-email" class="form-label">Email</label>
               <input type="text" class="form-control @error('email') is-invalid @enderror" id="login-email" name="email"
                 placeholder="john@example.com" aria-describedby="login-email" tabindex="1" autofocus
-                value="{{ old('email') }}" />
+                value="admin@gmail.com" />
               @error('email')
                 <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -51,7 +51,7 @@
               <div class="input-group input-group-merge form-password-toggle">
                 <input type="password" class="form-control form-control-merge" id="login-password" name="password"
                   tabindex="2" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                  aria-describedby="login-password" />
+                  aria-describedby="login-password" value="admin123" />
                 <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
               </div>
             </div>

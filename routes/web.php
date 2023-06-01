@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ Route::get('/', [LandingPageController::class, 'index'])->name('landing.index');
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'app'], function(){
     Route::get('/', [HomeController::class, 'home'])->name('home');
+    Route::resource('article', ArticleController::class)->except('create');
 });
 
 

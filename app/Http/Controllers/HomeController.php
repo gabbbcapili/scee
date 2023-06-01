@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Article;
 
 class HomeController extends Controller
 {
 
     public function home(){
         $breadcrumbs = [
-            ['link' => "home", 'name' => "Home"], ['name' => "Index"]
+            ['link' => "/", 'name' => "Search"], ['name' => "Index"]
         ];
-        return view('/content/home', ['breadcrumbs' => $breadcrumbs]);
+        $articles = Article::all();
+        return view('/content/home', compact('breadcrumbs', 'articles'));
     }
 
     public function setTheme($theme){
